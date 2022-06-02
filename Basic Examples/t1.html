@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="test">Halil Enes ÖZDEMİR</p>
+
+    <input type="text" id="myInput" value="Enes" />
+    <br />
+    <div id="myDiv" style="height: 250px; background-color: darkblue; width: 300px; margin-top: 20px; color: white"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        var metin = $('#test').text();
+        // console.log(metin);
+        // $('#test').text('selam');
+
+        // $('#myInput').val('Halil');
+        var inputValue = $('#myInput').val();
+        console.log(inputValue);
+
+        var htmlString = '<span>Merhaba</span>';
+        $('#myDiv').html(htmlString);
+
+        var sourceCode = $('#myDiv').html();
+        console.log(sourceCode);
+
+        var colorCode = $('#test').css('color');
+        // console.log(colorCode);
+      });
+    </script>
+  </body>
+</html>

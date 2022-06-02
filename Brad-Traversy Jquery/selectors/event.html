@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Crash Course | Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        font-size: 17px;
+        font-family: arial;
+        background: #f4f4f4;
+        line-height: 1.5em;
+      }
+      header {
+        background: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px #000 solid;
+        margin-bottom: 10px;
+      }
+      #container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>jQuery Crash Course</h1>
+    </header>
+    <div class="container">
+      <h3>Mouse Events</h3>
+      <button id="btn1" class="btnClass">Button 1</button>
+      <button id="btn2">Button 2</button>
+      <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vero sapiente quisquam doloremque! Numquam deleniti minima quisquam quam facere placeat cumque eos, sed recusandae ipsum provident at accusamus nam tempore repudiandae eius, eaque nulla soluta vero non dignissimos accusantium nobis. Sequi nesciunt, obcaecati cupiditate porro placeat veritatis suscipit enim earum.</p>
+      <h1 id="coords"></h1>
+      <hr />
+      
+      <form id="form">
+        <label for="">Name</label> <br />
+        <input type="text" id="name" name="name" />
+        <br />
+        <label for="">Email</label> </br>
+        <input type="text" id="email" name="email" />
+        <br /> 
+        <label for="">Gender</label>
+        <select name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="male">Female</option>
+        </select>
+        <br />
+        <input type="submit" value="submit" />
+      </form>
+    </div>
+
+    <script>
+
+      /*    $('#btn1').click(() => {
+        alert('Button Clicked!');
+      }); */
+
+      /*       $('#btn2').on('click', function () {
+        alert('Button Clicked');
+      }); */
+
+      /*       $('#btn1').dblclick(() => {
+        // $('.para1').hide();
+        // $('.para1').toggle();
+        $('.para1').toggle();
+      }); */
+
+      /*       $('#btn1').hover(() => {
+        // $('.para1').hide();
+        // $('.para1').toggle();
+        $('.para1').toggle();
+      }); */
+
+      // . hover ==> .on("mouseenter"), .on("mouseleave")
+
+      /*       $('#btn1').hover(() => {
+        // $('.para1').hide();
+        // $('.para1').toggle();
+        $('.para1').toggle();
+      }); */
+
+      /*       $('#btn2').on('click', function () {
+        $('.para1').show();
+      }); */
+
+      /*       $('#btn1').on('mouseup', () => {
+        $('.para1').css('color', 'red');
+      }); */
+
+/*       $('#btn1').click(e => {
+                 alert(e.currentTarget.id);
+        alert(e.currentTarget.innerHTML);
+        alert(e.currentTarget.outerHTML);
+        alert(e.currentTarget.className); 
+        $(document).on('mousemove', function (e) {
+          $('#coords').html('Coords: Y: ' + e.clientY + ' X: ' + e.clientX);
+        });
+      }); */
+
+/*      $("input").focus(function() {
+               console.log(this);
+        $(this).css("background","pink");
+      }); */
+
+
+      // Arrow function metodu ile birlikte çalışmadı.Çünkü mevcut scope'tan bir üstteki scop değerini tutuyor.
+
+/*        $("input").blur(function(){
+        //   alert("Focus")
+        $(this).css("background","white")
+      })  */
+
+
+/*     $("select#gender").change(function(e){
+     alert(e.target.value)
+    }); */
+
+/*     $("#form").submit(function(e){
+        e.preventDefault();
+        var name = $("input#name").val()
+        console.log(name);
+    }); */
+
+
+
+      </script>
+  </body>
+</html>

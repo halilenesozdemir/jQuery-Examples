@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $('button').click(function () {
+          var div = $('div');
+          div.animate({ height: '300px', opacity: '0.4' }, 'slow');
+          div.animate({ width: '300px', opacity: '0.8' }, 'slow');
+          div.animate({ height: '100px', opacity: '0.4' }, 'slow');
+          div.animate({ width: '100px', opacity: '0.8' }, 'slow');
+          div.animate({ fontSize: '40px' }, 'slow');
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Start Animation</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ratione tempora beatae illo consequuntur quis dolorum? Deserunt voluptatibus reiciendis obcaecati rem consectetur error, optio quam est enim sunt libero hic magnam sint modi earum commodi quibusdam recusandae beatae voluptas. Minus eveniet, impedit earum ipsa ad rerum neque excepturi voluptatem? Quam!</p>
+
+    <div style="background: #abbe76; height: 100px; width: 100px; position: absolute">Hello</div>
+  </body>
+</html>
