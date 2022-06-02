@@ -43,9 +43,15 @@
       <p class="para1">This is a paragraph</p>
       <p class="para2">This is an another paragraph</p>
       <div id="myDiv"></div>
+      <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+      </ul>
     </div>
     <script>
-      $('p.para1').css({ color: 'red', background: '#ccc' });
+      /* $('p.para1').css({ color: 'red', background: '#ccc' });
       $('p.para2').addClass('myClass');
       $('p.para2').removeClass('myClass');
       $('#btn1').click(() => {
@@ -53,6 +59,17 @@
       });
 
       $('#myDiv').html('<h5>Hello World</h5>');
+      //   alert($('#myDiv').html()); */
+      //   $('ul').append('<li>Append List Item</li>');
+
+      // Add to place by first item
+      //   $('ul').prepend('<li>Append List Item</li>')
+
+      $('.para1').appendTo('.para2');
+      $('.para1').prependTo('.para2');
+      $('ul').before('<h4>Hello</h4>');
+      $('ul').after('<h4>World</h4>');
+      $('ul').empty(); // full method is working vice versa
     </script>
   </body>
 </html>
