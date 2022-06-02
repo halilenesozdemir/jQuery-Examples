@@ -43,33 +43,66 @@
       <p class="para1">This is a paragraph</p>
       <p class="para2">This is an another paragraph</p>
       <div id="myDiv"></div>
-      <ul>
+      <input type="text" id="newItem" />
+      <ul id="list">
         <li>List Item 1</li>
         <li>List Item 2</li>
         <li>List Item 3</li>
         <li>List Item 4</li>
       </ul>
+      <a href="http://google.com">Google</a>
+      <ul id="users"></ul>
     </div>
+
     <script>
       /* $('p.para1').css({ color: 'red', background: '#ccc' });
-      $('p.para2').addClass('myClass');
-      $('p.para2').removeClass('myClass');
-      $('#btn1').click(() => {
-        $('p.para2').toggleClass('myClass');
-      });
+            $('p.para2').addClass('myClass');
+            $('p.para2').removeClass('myClass');
+            $('#btn1').click(() => {
+              $('p.para2').toggleClass('myClass');
+            });
 
-      $('#myDiv').html('<h5>Hello World</h5>');
-      //   alert($('#myDiv').html()); */
+            $('#myDiv').html('<h5>Hello World</h5>');
+            //   alert($('#myDiv').html()); */
       //   $('ul').append('<li>Append List Item</li>');
 
       // Add to place by first item
       //   $('ul').prepend('<li>Append List Item</li>')
 
-      $('.para1').appendTo('.para2');
-      $('.para1').prependTo('.para2');
-      $('ul').before('<h4>Hello</h4>');
-      $('ul').after('<h4>World</h4>');
-      $('ul').empty(); // full method is working vice versa
+      /*       $('.para1').appendTo('.para2');
+            $('.para1').prependTo('.para2');
+            $('ul').before('<h4>Hello</h4>');
+            $('ul').after('<h4>World</h4>');
+            $('ul').empty(); // full method is working vice versa
+            $('ul').detach(); // look up to the difference vs empty
+            $('a').attr('target', '_blank'); */
+      //   alert($('a').attr('href'));
+      //   $('a').removeAttr('target');
+
+      //   $('p').wrap('<h1>');
+      //   $('p').wrapAll('<h1>');
+
+      // Keydown and Keyup differences understood.
+
+      /*     jQuery keydown, klavyeden bir tuşa basıldığı anda aktif olan bir fonksiyondur. Örneğin klavyeden “m” tuşuna basıyorsunuz. keydown, “m” tuşuna bastığınız anda işlem yapmaya başlar. keyup fonksiyonundan farkı, keyup parmağınızı tuştan kaldırdığınız anda, keydown tuşa bastığınız anda aktif olur. */
+
+      /*       $('#newItem').keydown(function (e) {
+              var code = e.which;
+              if (code == 13) {
+                e.preventDefault();
+                $('ul').append('<li>' + e.target.value + '</li>');
+              }
+            });
+
+            var myArr = ['Brad', 'Kelly', 'Halil', 'Test', 'Ahmet'];
+
+            $.each(myArr, (i, val) => {
+              $('#users').append('<li>' + val + '</li>'); */
+
+      var newArr = $('ul#list li').toArray();
+      $.each(newArr, (i, val) => {
+        console.log(val.innerHTML);
+      });
     </script>
   </body>
 </html>
